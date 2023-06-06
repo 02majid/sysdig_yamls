@@ -1,0 +1,36 @@
+global:
+  sysdig:
+    accessKey: a1c89105-5476-4253-b205-199001006e77
+    region: us1
+    secureAPIToken: "39dabfba-496e-432b-971f-27516614a033"
+  clusterConfig:
+    name: amazing-sheepdog-1684854034
+  kspm:   
+    deploy: false
+admissionController:
+  enabled: true
+agent:
+  resourceProfile: small
+  # resources:
+  #   requests:
+  #     cpu: 400m
+  #     memory: 640Mi
+  #   limits:
+  #     cpu: 600m
+  #     memory: 896Mi
+  sysdig:
+    settings:
+      drift_killer:
+        enabled: false
+
+nodeAnalyzer:
+  secure:
+    vulnerabilityManagement:
+      newEngineOnly: false
+  nodeAnalyzer:
+    benchmarkRunner:
+      deploy: false 
+    runtimeScanner:
+      deploy: false
+      settings:
+        eveEnabled: true
